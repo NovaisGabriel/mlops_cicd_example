@@ -1,0 +1,30 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/mlops-cicd-example-463613/bike_app_model:$COMMIT_SHA', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/mlops-cicd-example-463613/bike_app_model:$COMMIT_SHA']
+
+- name: 'gcr.io/mlops-cicd-example-463613/bike_app_model:$COMMIT_SHA'
+  entrypoint: 'bash'
+  args:
+   - '-c'
+   - |
+      python main.py & python -m pytest
+  
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+   - 'run'
+   - 'deploy'
+   - 'bike-app-model'
+   - '--image'
+   - 'gcr.io/mlops-cicd-example-463613/bike_app_model:$COMMIT_SHA'
+   - '--region'
+   - 'southamerica-east1'
+   - '--allow-unauthenticated'
+images:
+- 'gcr.io/mlops-cicd-example-463613/bike_app_model:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
