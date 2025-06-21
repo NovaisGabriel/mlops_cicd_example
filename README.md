@@ -8,7 +8,7 @@ Data URL: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
 
 OBS: model will be developed locally.
 
-## Steps for creating environment
+## First Steps for creating environment
 1. Create new project at GCP
 2. Attach biiling configurations into your project
 3. Download CLI from google: https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe?hl=pt-br

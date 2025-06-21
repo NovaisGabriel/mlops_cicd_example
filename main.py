@@ -19,7 +19,7 @@ def load_model():
     bucket = storage_client.get_bucket(bucket_name)
     blob = bucket.blob("artifacts/trained_model_2.pkl")
     blob.download_to_filename("trained_model_2.pkl")
-    with open("trained_model.pkl", 'rb') as file:
+    with open("trained_model_2.pkl", 'rb') as file:
         model = pickle.load(file)
     return model
 
