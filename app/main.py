@@ -37,13 +37,9 @@ def predict():
     model = load_model()
     try : 
         input_json = request.get_json()
-        print(input_json)
         df_preprocessed = preprocess(input_json)
-        print(df_preprocessed)
         y_predictions = model.predict(df_preprocessed)
-        print(y_predictions)
         response = {'predictions': y_predictions.tolist()}
-        print(response)
         return jsonify(response), 200
     
     except Exception as e:
