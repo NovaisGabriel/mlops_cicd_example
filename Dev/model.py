@@ -22,6 +22,7 @@ print(df.head())
 # Sanity Check:
 print(SanityCheck(df).missing_values_summary())
 print(SanityCheck(df).column_distribution_summary())
+print(df.info())
 
 # Dividing into training and test:
 X = df.iloc[:,:-1]

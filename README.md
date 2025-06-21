@@ -6,6 +6,8 @@ Deploy the prediction serving application of a machine learning regresion model 
 
 Data URL: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
 
+OBS: model will be developed locally.
+
 ## Steps for creating environment
 1. Create new project at GCP
 2. Attach biiling configurations into your project

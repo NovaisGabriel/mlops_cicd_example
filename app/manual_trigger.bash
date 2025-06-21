@@ -1,0 +1,1 @@
+gcloud builds submit --region southamerica-east1
