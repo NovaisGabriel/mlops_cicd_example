@@ -14,6 +14,18 @@ OBS: model will be developed locally.
 3. Download CLI from google: https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe?hl=pt-br
 4. Connect to your project: gcloud config set project mlops-cicd-example
 
+## Services:
+
+<img src="images/cloudbuild.png">
+<img src="images/cloudbuild_done.png">
+<img src="images/cloudrun.png">
+<img src="images/connect.png">
+<img src="images/github_trigger.png">
+<img src="images/model_endpoint.png">
+<img src="images/storage.png">
+<img src="images/trained_model_gcs.png">
+
+
     
 
 
